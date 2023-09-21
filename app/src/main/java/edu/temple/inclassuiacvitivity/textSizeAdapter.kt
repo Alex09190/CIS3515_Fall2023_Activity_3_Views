@@ -19,11 +19,13 @@ class TextSizeAdapter(private val context: Context ,private val textSize : Array
                 tempTextView = convertView as TextView
         } else {
             tempTextView = TextView(context)
+            tempTextView.setPadding(5, 10, 0, 10)
         }
 
         tempTextView.text = textSize[position].toString()
         tempTextView.textSize = textSize[position].toFloat()
-        tempTextView.setPadding(5, 10, 0, 10)
+
+
 
         return tempTextView
     }
